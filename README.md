@@ -30,25 +30,21 @@ Visualización de:
 - Género
 - Sinopsis
 - Poster
+
 Gestión de favoritos
-Agregar películas a favoritos.
-Evitar duplicados mediante IMDb ID.
-Eliminar películas favoritas.
-Asignar puntuación de 1 a 5 estrellas.
-Agregar comentarios personalizados.
-Mostrar fecha de guardado.
-Mostrar año de estreno.
-Filtros y ordenamiento
-Filtrar películas favoritas desde un año determinado.
+- Agregar películas a favoritos.
+- Evitar duplicados mediante IMDb ID.
+- Eliminar películas favoritas.
+- Asignar puntuación de 1 a 5 estrellas.
+- Agregar comentarios personalizados.
+- Mostrar fecha de guardado.
+- Mostrar año de estreno.
+- Filtros y ordenamiento
+- Filtrar películas favoritas desde un año determinado.
+
 Ordenar favoritos por:
-Título
-Año
-Interfaz de usuario
-Diseño responsive con Bootstrap.
-Tema claro y oscuro.
-Navbar dinámica.
-Footer con información de contacto.
-Página "Sobre mí".
+- Título
+- Año
 ---------------------------------------------------------------------------------------------------------------------
 Sistema de autenticación
 
