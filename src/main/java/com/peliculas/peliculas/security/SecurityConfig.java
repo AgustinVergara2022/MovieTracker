@@ -1,6 +1,5 @@
 package com.peliculas.peliculas.security;
 
-import com.peliculas.peliculas.security.JwtAuthFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -49,29 +48,47 @@ public class SecurityConfig {
         return http.build();
     }
 
-    // CORS para Angular en localhost
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration cfg = new CorsConfiguration();
-        cfg.setAllowedOrigins(List.of("http://localhost:4200"));
-        cfg.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-        cfg.setAllowedHeaders(List.of("Authorization", "Content-Type"));
+
+        cfg.setAllowedOrigins(List.of(
+                "http://localhost:4200",
+                "https://peliculas-fullstack.vercel.app/"
+        ));
+
+        cfg.setAllowedMethods(List.of(
+                "GET",
+                "POST",
+                "PUT",
+                "DELETE",
+                "OPTIONS"
+        ));
+
+        cfg.setAllowedHeaders(List.of(
+                "Authorization",
+                "Content-Type"
+        ));
+
         cfg.setAllowCredentials(true);
 
-        UrlBasedCorsConfigurationSource src = new UrlBasedCorsConfigurationSource();
+        UrlBasedCorsConfigurationSource src =
+                new UrlBasedCorsConfigurationSource();
+
         src.registerCorsConfiguration("/**", cfg);
+
         return src;
     }
 
-    // Password encoder
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // AuthenticationManager (por si lo necesitás en algún servicio)
     @Bean
-    public AuthenticationManager authenticationManager(AuthenticationConfiguration cfg) throws Exception {
+    public AuthenticationManager authenticationManager(
+            AuthenticationConfiguration cfg
+    ) throws Exception {
         return cfg.getAuthenticationManager();
     }
 }

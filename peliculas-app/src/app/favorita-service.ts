@@ -2,10 +2,12 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Favorita } from './favorita';
+import { environment } from '../environments/environment';
+
 
 @Injectable({providedIn: 'root'})
 export class FavoritaService {
-   private urlBase = 'http://localhost:8080/api/favoritas';
+  private urlBase = `${environment.apiUrl}/api/favoritas`;
 
   private http = inject(HttpClient);
 
