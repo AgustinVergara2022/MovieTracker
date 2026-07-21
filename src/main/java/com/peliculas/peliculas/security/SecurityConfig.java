@@ -54,7 +54,7 @@ public class SecurityConfig {
 
         cfg.setAllowedOrigins(List.of(
                 "http://localhost:4200",
-                "https://peliculas-fullstack.vercel.app/"
+                "https://peliculas-fullstack.vercel.app"
         ));
 
         cfg.setAllowedMethods(List.of(
