@@ -1,10 +1,20 @@
-HELP.md
+# Spring Boot
+src/main/resources/application-local.properties
+.env
+
+# Maven
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### STS ###
+# IDE
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# STS
 .apt_generated
 .classpath
 .factorypath
@@ -13,13 +23,7 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -29,7 +33,5 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
-
-src/main/resources/application-local.properties
